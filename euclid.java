@@ -7,10 +7,10 @@ class Euclid {
 
         // Read in numbers via command line
         System.out.println("Enter number one: ");
-        int inputNumber1 = Integer.parseInt((scanner.nextLine()));
+        int inputNumber1 = Math.abs(Integer.parseInt((scanner.nextLine())));
         
         System.out.println("Enter number two: ");
-        int inputNumber2 = Integer.parseInt((scanner.nextLine()));
+        int inputNumber2 = Math.abs(Integer.parseInt((scanner.nextLine())));
 
         int gcdResult = new Euclid().getGCD(inputNumber1, inputNumber2);
         System.out.println("The GCD is: " + gcdResult);
