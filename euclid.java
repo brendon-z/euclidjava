@@ -12,13 +12,13 @@ class Euclid {
         System.out.println("Enter number two: ");
         int inputNumber2 = Math.abs(Integer.parseInt((scanner.nextLine())));
 
-        int gcdResult = new Euclid().getGCD(inputNumber1, inputNumber2);
+        int gcdResult = getGCD(Math.max(inputNumber1, inputNumber2), Math.min(inputNumber1, inputNumber2));
         System.out.println("The GCD is: " + gcdResult);
 
         scanner.close();
     }
 
-    public int getGCD(int x1, int x2) {
+    public static int getGCD(int x1, int x2) {
         int remainder = divisionAlgo(x1, x2);
         if (remainder == 0) {
             return x2;
@@ -28,7 +28,7 @@ class Euclid {
     }
 
     // Simple "subtract until you can't no more" division algorithm
-    public int divisionAlgo(int x1, int x2) {
+    public static int divisionAlgo(int x1, int x2) {
         int smallest = Math.min(x1, x2);
         int remainder = Math.max(x1, x2);
 
