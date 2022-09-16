@@ -1,2 +1,2 @@
 # euclidjava
-Euclidean algorithm in java
+A simple implementation of the Euclidean algorithm in Java.
